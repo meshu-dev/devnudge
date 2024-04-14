@@ -1,0 +1,21 @@
+---
+import Layout from '../layouts/Layout.astro'
+import { getPage } from '../utils/blog'
+import { getBlogViewPaths } from '../utils/staticPaths'
+import type { BlogPage, BlogStaticPathParams } from '../types/blog'
+
+export async function getStaticPaths() {
+  const pageSlugs: BlogStaticPathParams[] = await getBlogViewPaths()
+  return pageSlugs
+}
+
+const { slug } = Astro.params
+const blogPage: BlogPage|null = await getPage(slug)
+---
+
+<Layout title={ `${blogPage?.heading} | Meshu` }>
+	<main>
+		<h1>{ blogPage?.heading }</h1>
+    	<article set:html={ blogPage?.body } />
+	</main>
+</Layout>
