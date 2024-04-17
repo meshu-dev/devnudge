@@ -9,10 +9,6 @@ pages = pages.filter(page => page.slug)
 ---
 
 <Layout title="Welcome to Mesh's Blog">
-	<main>
-		<h1><span class="text-gradient">Mesh's Blog</span></h1>
-		{
-			pages.map((page: NotionPage) => <BlogListItem page={ page } />)
-		}
-	</main>
+	<h1>Posts</h1>
+	{ pages.map((page: NotionPage) => <BlogListItem page={ page } />) }
 </Layout>

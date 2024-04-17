@@ -14,8 +14,6 @@ const blogPage: BlogPage|null = await getPage(slug)
 ---
 
 <Layout title={ `${blogPage?.heading} | Meshu` }>
-	<main>
-		<h1>{ blogPage?.heading }</h1>
-    	<article set:html={ blogPage?.body } />
-	</main>
+	<h1>{ blogPage?.heading }</h1>
+	<article set:html={ blogPage?.body } />
 </Layout>

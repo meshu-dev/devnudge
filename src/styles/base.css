@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-4xl font-extrabold mt-5 mb-10;
+  }
+  h2 {
+    @apply text-3xl font-semibold mb-6;
+  }
+  p {
+    @apply mb-6;
+  }
+  pre {
+    @apply mb-6;
+  }
+  article a {
+    @apply font-medium underline underline-offset-4;
+  }
+  article p img {
+    @apply mx-auto;
+  }
+}

@@ -1,0 +1,13 @@
+---
+import type { NotionPage, NotionTag } from '../types/notion';
+
+interface Props {
+	tag: NotionTag
+}
+
+const { tag } = Astro.props;
+---
+
+<span class="bg-slate-100 text-black px-3 py-1 mr-2 rounded-lg">
+	{ tag.name }
+</span>
