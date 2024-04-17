@@ -1,5 +1,5 @@
 import { Client } from '@notionhq/client'
-import type { GetPageResponse, PageObjectResponse, QueryDatabaseResponse } from '@notionhq/client/build/src/api-endpoints'
+import type { QueryDatabaseResponse } from '@notionhq/client/build/src/api-endpoints'
 import type { NotionPage } from '../types/notion'
 
 export const getNotionClient = (): Client => {
@@ -32,7 +32,6 @@ export const getNotionPages = async (): Promise<NotionPage[]> => {
 }
 
 const makeNotionPage = (page: any): NotionPage => {
-  const id: string = page.id
   const properties = page.properties
 
   const notionPage: NotionPage = {
