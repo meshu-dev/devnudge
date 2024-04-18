@@ -1,0 +1,21 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import BlogListItem from '../../components/BlogListItem.astro'
+import { getNotionPagesByTag } from '../../utils/notion'
+import type { NotionPage } from '../../types/notion'
+import type { TagStaticPathParams } from '../../types/blog'
+import { getTaggedBlogListPaths } from '../../utils/staticPaths'
+
+export async function getStaticPaths() {
+  const pageTags: TagStaticPathParams[] = await getTaggedBlogListPaths()
+  return pageTags
+}
+
+const { tag } = Astro.params
+let pages = await getNotionPagesByTag(tag)
+---
+
+<Layout title="Welcome to Mesh's Blog">
+	<h1>Tag: {tag}</h1>
+	{ pages.map((page: NotionPage) => <BlogListItem page={ page } />) }
+</Layout>

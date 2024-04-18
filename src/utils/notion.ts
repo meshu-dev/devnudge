@@ -26,9 +26,34 @@ export const getNotionPages = async (): Promise<NotionPage[]> => {
   const pages: NotionPage[] = []
 
   for (let page of database.results) {
-    pages.push(makeNotionPage(page))
+    const notionPage: NotionPage = makeNotionPage(page)
+
+    if (notionPage.slug) {
+      pages.push(makeNotionPage(page))
+    }
   }
   return pages
+}
+
+export const getNotionPagesByTag = async (tag: string): Promise<NotionPage[]> => {
+  const pages: NotionPage[]       = await getNotionPages()
+  const taggedPages: NotionPage[] = []
+
+  for (const page of pages) {
+    let hasTag = false
+
+    for (const pageTag of page.tags) {
+      if (pageTag.name == tag) {
+        hasTag = true
+        break
+      }
+    }
+
+    if (hasTag) {
+      taggedPages.push(page)
+    }
+  }
+  return taggedPages
 }
 
 const makeNotionPage = (page: any): NotionPage => {
