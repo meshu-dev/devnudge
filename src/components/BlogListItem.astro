@@ -11,7 +11,7 @@ const { page } = Astro.props
 ---
 
 <div class="my-14">
-	<a class="text-2xl font-bold" href={ page.slug }>{ page.heading }</a>
+	<a class="text-2xl font-bold" href={ `/${page.slug}` }>{ page.heading }</a>
 	<div class="mt-2 mb-3">{ dayjs(page.createdAt).format('MMM D, YYYY') }</div>
 	<div class="mt-2">{ page.tags.map((tag: NotionTag) => <BlogTag tag={ tag } />) }</div>
 </div>
