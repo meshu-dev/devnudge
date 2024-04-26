@@ -1,9 +1,0 @@
-{
-  "redirects": [
-    { 
-      "source": "/ubuntu-server-upgrade",
-      "destination": "https://devnudge.io/ubuntu-server-upgrade", 
-      "permanent": true
-    }
-  ]
-}

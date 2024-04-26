@@ -4,154 +4,172 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
 <url>
-  <loc>https://meshu.net/</loc>
-  <lastmod>2024-04-23T16:19:47+00:00</lastmod>
+  <loc>https://devnudge.io/</loc>
+  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://meshu.net/laravel-telescope</loc>
-  <lastmod>2024-04-23T16:19:47+00:00</lastmod>
+  <loc>https://devnudge.io/ubuntu-server-upgrade</loc>
+  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://meshu.net/tag/laravel</loc>
-  <lastmod>2024-04-23T16:19:47+00:00</lastmod>
+  <loc>https://devnudge.io/tag/linux</loc>
+  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://meshu.net/sqlite-vscode</loc>
-  <lastmod>2024-04-23T16:19:47+00:00</lastmod>
+  <loc>https://devnudge.io/tag/ubuntu</loc>
+  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://meshu.net/tag/vscode</loc>
-  <lastmod>2024-04-23T16:19:47+00:00</lastmod>
+  <loc>https://devnudge.io/laravel-scramble</loc>
+  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://meshu.net/tag/sqlite</loc>
-  <lastmod>2024-04-23T16:19:47+00:00</lastmod>
+  <loc>https://devnudge.io/tag/laravel</loc>
+  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://meshu.net/eza</loc>
-  <lastmod>2024-04-23T16:19:47+00:00</lastmod>
+  <loc>https://devnudge.io/laravel-telescope</loc>
+  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://meshu.net/tag/linux</loc>
-  <lastmod>2024-04-23T16:19:47+00:00</lastmod>
+  <loc>https://devnudge.io/sqlite-vscode</loc>
+  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://meshu.net/tag/cli</loc>
-  <lastmod>2024-04-23T16:19:47+00:00</lastmod>
+  <loc>https://devnudge.io/tag/vscode</loc>
+  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://meshu.net/laravel-pint</loc>
-  <lastmod>2024-04-23T16:19:47+00:00</lastmod>
+  <loc>https://devnudge.io/tag/sqlite</loc>
+  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://meshu.net/code-block-highlighting</loc>
-  <lastmod>2024-04-23T16:19:47+00:00</lastmod>
+  <loc>https://devnudge.io/eza</loc>
+  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://meshu.net/tag/javascript</loc>
-  <lastmod>2024-04-23T16:19:47+00:00</lastmod>
+  <loc>https://devnudge.io/tag/cli</loc>
+  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://meshu.net/tag/astro</loc>
-  <lastmod>2024-04-23T16:19:47+00:00</lastmod>
+  <loc>https://devnudge.io/laravel-pint</loc>
+  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://meshu.net/bat</loc>
-  <lastmod>2024-04-23T16:19:47+00:00</lastmod>
+  <loc>https://devnudge.io/code-block-highlighting</loc>
+  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://meshu.net/notion-image-expiry-time</loc>
-  <lastmod>2024-04-23T16:19:47+00:00</lastmod>
+  <loc>https://devnudge.io/tag/javascript</loc>
+  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://meshu.net/tag/notion</loc>
-  <lastmod>2024-04-23T16:19:47+00:00</lastmod>
+  <loc>https://devnudge.io/tag/astro</loc>
+  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://meshu.net/cloudflare-too-many-redirects</loc>
-  <lastmod>2024-04-23T16:19:47+00:00</lastmod>
+  <loc>https://devnudge.io/bat</loc>
+  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://meshu.net/tag/services</loc>
-  <lastmod>2024-04-23T16:19:47+00:00</lastmod>
+  <loc>https://devnudge.io/notion-image-expiry-time</loc>
+  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://meshu.net/tag/cloudflare</loc>
-  <lastmod>2024-04-23T16:19:47+00:00</lastmod>
+  <loc>https://devnudge.io/tag/notion</loc>
+  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://meshu.net/updating-linux-server</loc>
-  <lastmod>2024-04-23T16:19:47+00:00</lastmod>
+  <loc>https://devnudge.io/cloudflare-too-many-redirects</loc>
+  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://meshu.net/custom-alias</loc>
-  <lastmod>2024-04-23T16:19:47+00:00</lastmod>
+  <loc>https://devnudge.io/tag/services</loc>
+  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://meshu.net/git-unrelated-histories</loc>
-  <lastmod>2024-04-23T16:19:47+00:00</lastmod>
+  <loc>https://devnudge.io/tag/cloudflare</loc>
+  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://meshu.net/tag/git</loc>
-  <lastmod>2024-04-23T16:19:47+00:00</lastmod>
+  <loc>https://devnudge.io/updating-linux-server</loc>
+  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://meshu.net/git-add-remote</loc>
-  <lastmod>2024-04-23T16:19:47+00:00</lastmod>
+  <loc>https://devnudge.io/custom-alias</loc>
+  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://meshu.net/astro</loc>
-  <lastmod>2024-04-23T16:19:47+00:00</lastmod>
+  <loc>https://devnudge.io/git-unrelated-histories</loc>
+  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://meshu.net/ip</loc>
-  <lastmod>2024-04-23T16:19:47+00:00</lastmod>
+  <loc>https://devnudge.io/tag/git</loc>
+  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://meshu.net/notion-api</loc>
-  <lastmod>2024-04-23T16:19:47+00:00</lastmod>
+  <loc>https://devnudge.io/git-add-remote</loc>
+  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://meshu.net/bun</loc>
-  <lastmod>2024-04-23T16:19:47+00:00</lastmod>
+  <loc>https://devnudge.io/astro</loc>
+  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://meshu.net/notion-blog</loc>
-  <lastmod>2024-04-23T16:19:47+00:00</lastmod>
+  <loc>https://devnudge.io/ip</loc>
+  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://meshu.net/laravel-11</loc>
-  <lastmod>2024-04-23T16:19:47+00:00</lastmod>
+  <loc>https://devnudge.io/notion-api</loc>
+  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/bun</loc>
+  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/notion-blog</loc>
+  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/laravel-11</loc>
+  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 
