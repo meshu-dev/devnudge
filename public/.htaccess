@@ -1,2 +1,3 @@
-RewriteCond %{HTTP_HOST} ^(?:www\.)meshu\.net$ [NC]
-RewriteRule ^https://devnudge.io%{REQUEST_URI} [L,R=301]
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^meshu.net [NC]
+RewriteRule ^(.*)$ https://devnudge.io/$1 [L,R=301,NC]
