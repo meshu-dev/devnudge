@@ -1,7 +1,7 @@
 {
   "redirects": [
     { 
-      "source": "https://meshu.net/ubuntu-server-upgrade",
+      "source": "/ubuntu-server-upgrade",
       "destination": "https://devnudge.io/ubuntu-server-upgrade", 
       "permanent": true
     }
