@@ -2,15 +2,19 @@ import { Client } from '@notionhq/client'
 import type { QueryDatabaseResponse } from '@notionhq/client/build/src/api-endpoints'
 import type { NotionPage } from '../types/notion'
 
+
+const notionType: string = import.meta.env.PROD ? import.meta.env.NOTION_TOKEN : import.meta.env.PUBLIC_NOTION_TOKEN
+const notionDatabaseId: string = import.meta.env.PROD ? import.meta.env.NOTION_DATABASE_ID : import.meta.env.PUBLIC_NOTION_DATABASE_ID
+
 export const getNotionClient = (): Client => {
-  return new Client({ auth: process.env.NOTION_TOKEN })
+  return new Client({ auth: notionType })
 }
 
 export const getNotionDatabase = async (): Promise<QueryDatabaseResponse> => {
   const notion = getNotionClient()
 
   return await notion.databases.query({
-    database_id: process.env.NOTION_DATABASE_ID || ''
+    database_id: notionDatabaseId
   })
 }
 
