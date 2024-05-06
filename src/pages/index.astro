@@ -8,6 +8,5 @@ let pages = await getNotionPages()
 ---
 
 <Layout title="Welcome to Mesh's Blog">
-	<h1>Posts</h1>
 	{ pages.map((page: NotionPage) => <BlogListItem page={ page } />) }
 </Layout>
