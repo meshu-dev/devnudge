@@ -2,7 +2,9 @@ export type NotionPage = {
   id: string
   slug: string
   heading: string
+  status: string
   tags: NotionTag[]
+  publishedAt: string|null
   createdAt: string
 }
 

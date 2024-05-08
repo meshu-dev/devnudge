@@ -1,10 +1,12 @@
 import { Client } from '@notionhq/client'
 import type { QueryDatabaseResponse } from '@notionhq/client/build/src/api-endpoints'
 import type { NotionPage } from '../types/notion'
-
+import dayjs from 'dayjs'
+import isSameOrAfter from 'dayjs/plugin/isSameOrAfter'
 
 const notionType: string = import.meta.env.PROD ? import.meta.env.NOTION_TOKEN : import.meta.env.PUBLIC_NOTION_TOKEN
 const notionDatabaseId: string = import.meta.env.PROD ? import.meta.env.NOTION_DATABASE_ID : import.meta.env.PUBLIC_NOTION_DATABASE_ID
+dayjs.extend(isSameOrAfter)
 
 export const getNotionClient = (): Client => {
   return new Client({ auth: notionType })
@@ -32,8 +34,13 @@ export const getNotionPages = async (): Promise<NotionPage[]> => {
   for (let page of database.results) {
     const notionPage: NotionPage = makeNotionPage(page)
 
-    if (notionPage.slug) {
-      pages.push(makeNotionPage(page))
+    if (
+      notionPage.slug &&
+      notionPage.status === 'Done' &&
+      notionPage.publishedAt &&
+      dayjs().isSameOrAfter(dayjs(notionPage.publishedAt)) 
+    ) {
+      pages.push(notionPage)
     }
   }
   return pages
@@ -67,7 +74,9 @@ const makeNotionPage = (page: any): NotionPage => {
     id: page.id,
     slug: properties.URL.url,
     heading: properties.Name.title[0]['plain_text'],
+    status: properties.Status.status.name,
     tags: properties.Tags.multi_select,
+    publishedAt: properties.Published.date?.start,
     createdAt: properties.Created.created_time
   }
   return notionPage

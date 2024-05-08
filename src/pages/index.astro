@@ -7,6 +7,6 @@ import type { NotionPage } from '../types/notion'
 let pages = await getNotionPages()
 ---
 
-<Layout title="Welcome to Mesh's Blog">
+<Layout title="DevNudge software development blog">
 	{ pages.map((page: NotionPage) => <BlogListItem page={ page } />) }
 </Layout>
