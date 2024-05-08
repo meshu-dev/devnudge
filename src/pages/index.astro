@@ -1,8 +1,8 @@
 ---
-import Layout from '../layouts/Layout.astro'
-import BlogListItem from '../components/BlogListItem.astro'
-import { getNotionPages } from '../utils/notion'
-import type { NotionPage } from '../types/notion'
+import Layout from '@/layouts/Layout.astro'
+import BlogListItem from '@/components/BlogListItem.astro'
+import { getNotionPages } from '@/utils/notion'
+import type { NotionPage } from '@/types/notion'
 
 let pages = await getNotionPages()
 ---

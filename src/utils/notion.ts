@@ -1,6 +1,6 @@
 import { Client } from '@notionhq/client'
 import type { QueryDatabaseResponse } from '@notionhq/client/build/src/api-endpoints'
-import type { NotionPage } from '../types/notion'
+import type { NotionPage } from '@/types/notion'
 import dayjs from 'dayjs'
 import isSameOrAfter from 'dayjs/plugin/isSameOrAfter'
 

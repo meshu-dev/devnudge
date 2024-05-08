@@ -1,6 +1,6 @@
-import type { NotionPage } from "../types/notion"
-import type { BlogStaticPathParams, TagStaticPathParams } from "../types/blog"
-import { getNotionPages } from "./notion"
+import type { NotionPage } from "@/types/notion"
+import type { BlogStaticPathParams, TagStaticPathParams } from "@/types/blog"
+import { getNotionPages } from "@/utils/notion"
 
 export const getBlogViewPaths = async (): Promise<BlogStaticPathParams[]> => {
   const pages: NotionPage[] = await getNotionPages()

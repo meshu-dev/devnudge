@@ -1,8 +1,8 @@
 ---
-import Layout from '../layouts/Layout.astro'
-import { getPage } from '../utils/blog'
-import { getBlogViewPaths } from '../utils/staticPaths'
-import type { BlogPage, BlogStaticPathParams } from '../types/blog'
+import Layout from '@/layouts/Layout.astro'
+import { getPage } from '@/utils/blog'
+import { getBlogViewPaths } from '@/utils/staticPaths'
+import type { BlogPage, BlogStaticPathParams } from '@/types/blog'
 
 export async function getStaticPaths() {
   const pageSlugs: BlogStaticPathParams[] = await getBlogViewPaths()

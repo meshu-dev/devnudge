@@ -1,6 +1,6 @@
 import { NotionToMarkdown } from 'notion-to-md'
 import type { MdStringObject } from 'notion-to-md/build/types'
-import { getNotionClient } from './notion'
+import { getNotionClient } from '@/utils/notion'
 
 const getNotionToMarkdown = (): NotionToMarkdown => {
   const notion = getNotionClient()
