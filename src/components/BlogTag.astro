@@ -1,15 +1,10 @@
 ---
-import type { NotionTag } from '@/types/notion';
-
-interface Props {
-	tag: NotionTag
-}
-
+type Props = { tag: string };
 const { tag } = Astro.props;
 ---
 
-<a href={ `/tag/${tag.name}` }>
+<a href={`/tag/${tag}`}>
   <span class="bg-slate-100 text-black px-3 py-1 mr-2 rounded-lg">
-    { tag.name }
+    {tag}
   </span>
 </a>

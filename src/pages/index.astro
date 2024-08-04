@@ -1,12 +1,12 @@
 ---
-import Layout from '@/layouts/Layout.astro'
-import BlogListItem from '@/components/BlogListItem.astro'
-import { getNotionPages } from '@/utils/notion'
-import type { NotionPage } from '@/types/notion'
+import Layout from "@/layouts/Layout.astro";
+import BlogListItem from "@/components/BlogListItem.astro";
+import type { BlogList } from "@/types/blog";
+import { getBlogs } from "@/utils/api";
 
-let pages = await getNotionPages()
+let blogs = await getBlogs();
 ---
 
 <Layout title="DevNudge software development blog">
-	{ pages.map((page: NotionPage) => <BlogListItem page={ page } />) }
+	{blogs.map((blog: BlogList) => <BlogListItem blog={blog} />)}
 </Layout>

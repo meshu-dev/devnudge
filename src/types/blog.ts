@@ -1,16 +1,10 @@
-export type BlogPage = {
-  heading: string
-  body: string
-}
+export type Blog = BlogList & { content: string }
 
-export type BlogStaticPathParams = {
-  params: {
-    slug: string
-  }
-}
-
-export type TagStaticPathParams = {
-  params: {
-    tag: string
-  }
+export type BlogList = {
+  title: string,
+  slug: string
+  status: string
+  tags: string[]
+  published_at: string | null
+  created_at: string
 }
