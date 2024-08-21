@@ -1,0 +1,20 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import BlogList from "@/components/BlogList.astro";
+import { getBlogs } from "@/utils/api";
+import type { BlogListStaticPathParams } from "@/types/static";
+import { getBlogListPaths } from "@/utils/staticPaths";
+import type { PaginatedBlogList } from "@/types/blog";
+
+export async function getStaticPaths() {
+  const blogListPages: BlogListStaticPathParams[] = await getBlogListPaths();
+  return blogListPages;
+}
+
+const { page } = Astro.params;
+const blogPagination: PaginatedBlogList = await getBlogs(Number(page));
+---
+
+<Layout title="DevNudge software development blog">
+  <BlogList path="/blog" blogPagination={blogPagination} />
+</Layout>

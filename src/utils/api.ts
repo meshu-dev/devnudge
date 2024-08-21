@@ -1,4 +1,4 @@
-import type { Blog, BlogList } from "@/types/blog"
+import type { Blog, BlogItem, PaginatedBlogList } from "@/types/blog"
 
 const devnudgeApiUrl: string = import.meta.env.PROD ? import.meta.env.DEVNUDGE_API_URL : import.meta.env.PUBLIC_DEVNUDGE_API_URL
 
@@ -16,18 +16,25 @@ export const getTags = async (): Promise<string[]> => {
   return tags
 }
 
-export const getBlogs = async (): Promise<BlogList[]> => {
-  const response: Response = await fetch(`${devnudgeApiUrl}/blogs/published`)
-  const blogs: BlogList[] = await response.json()
+export const getTotalPages = async (): Promise<number> => {
+  const response: Response = await fetch(`${devnudgeApiUrl}/blogs/published/total-pages`)
+  const data: { [total_pages: string]: number } = await response.json()
 
-  return blogs
+  return data.total_pages
 }
 
-export const getBlogsByTag = async (tag: string): Promise<BlogList[]> => {
-  const response: Response = await fetch(`${devnudgeApiUrl}/blogs/published/tag/${tag}`)
-  const blogs: BlogList[] = await response.json()
+export const getBlogs = async (page: number = 1): Promise<PaginatedBlogList> => {
+  const response: Response = await fetch(`${devnudgeApiUrl}/blogs/published?page=${page}`)
+  const paginatedBlogList: PaginatedBlogList = await response.json()
 
-  return blogs
+  return paginatedBlogList
+}
+
+export const getBlogsByTag = async (tag: string): Promise<PaginatedBlogList> => {
+  const response: Response = await fetch(`${devnudgeApiUrl}/blogs/published/tag/${tag}`)
+  const paginatedBlogList: PaginatedBlogList = await response.json()
+
+  return paginatedBlogList
 }
 
 export const getBlog = async (slug: string): Promise<Blog> => {
