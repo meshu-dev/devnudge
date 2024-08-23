@@ -17,3 +17,9 @@ export type PaginatedBlogList = {
     total: number
   }
 }
+
+export type Tag = {
+  name: string,
+  total_blogs: number,
+  total_pages: number
+}
