@@ -1,0 +1,15 @@
+---
+import BlogTag from "@/components/BlogTag.astro";
+import dayjs from "dayjs";
+import type { BlogItem } from "@/types/blog";
+
+type Props = { blog: BlogItem };
+const { blog } = Astro.props;
+---
+
+<div class="flex justify-between mb-6">
+  <a class="text-2xl" href={`/${blog.slug}`}>{blog.title}</a>
+  <div>
+    {blog.published_at ? dayjs(blog.published_at).format("MMM D, YYYY") : ""}
+  </div>
+</div>

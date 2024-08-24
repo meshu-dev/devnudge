@@ -1,4 +1,4 @@
-import type { Blog, PaginatedBlogList, Tag } from "@/types/blog"
+import type { Blog, BlogItem, PaginatedBlogList, Tag } from "@/types/blog"
 
 const devnudgeApiUrl: string = import.meta.env.PROD ? import.meta.env.DEVNUDGE_API_URL : import.meta.env.PUBLIC_DEVNUDGE_API_URL
 
@@ -42,4 +42,11 @@ export const getBlog = async (slug: string): Promise<Blog> => {
   const blog: Blog = await response.json()
 
   return blog
+}
+
+export const getLatest = async (): Promise<BlogItem[]> => {
+  const response: Response = await fetch(`${devnudgeApiUrl}/blogs/latest`)
+  const blogs: BlogItem[] = await response.json()
+
+  return blogs
 }
