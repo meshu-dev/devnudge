@@ -1,12 +1,16 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import BlogList from "@/components/BlogList.astro";
-import { getBlogs } from "@/utils/api";
-import type { PaginatedBlogList } from "@/types/blog";
-
-const blogPagination: PaginatedBlogList = await getBlogs();
+import XButton from "@/components/XButton.astro";
 ---
 
 <Layout title="DevNudge software development blog">
-  <BlogList path="/blog" blogPagination={blogPagination} />
+  <p class="text-4xl font-bold leading-normal text-gray-900 dark:text-white">
+    Personal web developer notes<br /> made public
+  </p>
+  <p class="text-xl font-bold leading-normal text-gray-900 dark:text-white">
+    Hi, I'm Mesh!, this is my developer blog where I write guides on new or
+    existing web technologies that I use in my personal projects and
+    professional work.
+  </p>
+  <XButton />
 </Layout>

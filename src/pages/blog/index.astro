@@ -1,0 +1,12 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import BlogList from "@/components/BlogList.astro";
+import { getBlogs } from "@/utils/api";
+import type { PaginatedBlogList } from "@/types/blog";
+
+const blogPagination: PaginatedBlogList = await getBlogs();
+---
+
+<Layout title="DevNudge software development blog">
+  <BlogList path="/blog" blogPagination={blogPagination} />
+</Layout>

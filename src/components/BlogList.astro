@@ -7,7 +7,7 @@ type Props = { path: string; blogPagination: PaginatedBlogList };
 const { path, blogPagination } = Astro.props;
 ---
 
-<div>
+<div class="mb-10">
   {
     blogPagination.data.map((blogItem: BlogItem) => (
       <BlogListItem blog={blogItem} />

@@ -1,13 +1,14 @@
 ---
 import "@/styles/highlight.min.css";
 import "@/styles/base.css";
+import Header from "@/layouts/Header.astro";
 
 type Props = { title: string };
 const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en" data-theme="light">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
@@ -23,38 +24,35 @@ const { title } = Astro.props;
   </head>
   <body>
     <div class="m-auto lg:w-[900px] px-6">
-      <header class="py-6">
-        <a href="/">
-          <span class="text-2xl font-extrabold">DevNudge</span>
-        </a>
-      </header>
-      <main>
+      <Header />
+      <main class="px-4">
         <slot />
       </main>
     </div>
   </body>
+
+  <style is:global>
+    :root {
+      --accent: 136, 58, 234;
+      --accent-light: 224, 204, 250;
+      --accent-dark: 49, 10, 101;
+      --accent-gradient: linear-gradient(
+        45deg,
+        rgb(var(--accent)),
+        rgb(var(--accent-light)) 30%,
+        white 60%
+      );
+    }
+    html {
+      font-family: system-ui, sans-serif;
+      /* background: #13151a; */
+      background: #fff;
+      background-size: 224px;
+    }
+    main {
+      color: #000;
+      font-size: 20px;
+      line-height: 1.6;
+    }
+  </style>
 </html>
-<style is:global>
-  :root {
-    --accent: 136, 58, 234;
-    --accent-light: 224, 204, 250;
-    --accent-dark: 49, 10, 101;
-    --accent-gradient: linear-gradient(
-      45deg,
-      rgb(var(--accent)),
-      rgb(var(--accent-light)) 30%,
-      white 60%
-    );
-  }
-  html {
-    font-family: system-ui, sans-serif;
-    /* background: #13151a; */
-    background: #fff;
-    background-size: 224px;
-  }
-  main {
-    color: #000;
-    font-size: 20px;
-    line-height: 1.6;
-  }
-</style>
