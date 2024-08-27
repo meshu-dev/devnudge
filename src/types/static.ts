@@ -13,6 +13,5 @@ export type BlogListStaticPathParams = {
 export type TagStaticPathParams = {
   params: {
     tag: string
-    page: number
   }
 }
