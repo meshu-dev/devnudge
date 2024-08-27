@@ -8,35 +8,26 @@ for (let index = 0; index < totalPages; index++) {
   const page: number = index + 1;
   let pageBtn: string = "";
 
-  const btnClasses: string = `${page == 1 ? "rounded-s-lg" : ""} ${page == totalPages ? "rounded-e-lg" : ""} flex items-center justify-center px-4 h-10 leading-tight border`;
-
   if (page == currentPage) {
-    pageBtn = `
-      <span
-        aria-current="page"
-        class="${btnClasses} z-10 text-blue-600 border-blue-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white"
-        >
-      ${page}
-      </span>
-    `;
+    pageBtn = `<span class="join-item btn btn-active">${page}</span>`;
   } else {
-    pageBtn = `
-      <a
-        href="${page > 1 ? `${path}/${page}` : `${path}`}"
-        class="${btnClasses} text-gray-500 bg-white border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
-        >${page}</a
-      >`;
+    let link: string;
+
+    if (page > 1) {
+      link = `${path}/${page}`;
+    } else {
+      link = path != "/blog" ? path : "/";
+    }
+    pageBtn = `<a href="${link}" class="join-item btn">${page}</a>`;
   }
-  buttons.push(`<li>${pageBtn}</li>`);
+  buttons.push(pageBtn);
 }
 ---
 
 {
   totalPages > 1 ? (
-    <nav aria-label="Page navigation example">
-      <ul class="flex items-center -space-x-px h-10 text-base list-none m-0 rounded-lg">
-        <Fragment set:html={buttons} />
-      </ul>
-    </nav>
+    <div class="join">
+      <Fragment set:html={buttons} />
+    </div>
   ) : null
 }
