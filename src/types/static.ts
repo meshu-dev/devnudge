@@ -4,12 +4,6 @@ export type BlogStaticPathParams = {
   }
 }
 
-export type BlogListStaticPathParams = {
-  params: {
-    page: number
-  }
-}
-
 export type TagStaticPathParams = {
   params: {
     tag: string
