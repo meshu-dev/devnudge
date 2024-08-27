@@ -6,22 +6,52 @@
   h1 {
     @apply text-4xl font-extrabold mt-5 mb-10;
   }
-  h2 {
-    @apply text-3xl font-semibold mb-6;
-  }
+
   p {
     @apply mb-6;
   }
-  pre {
-    @apply mb-6;
-  }
+
   article a {
     @apply font-medium underline underline-offset-4;
   }
+
   article p img {
     @apply mx-auto;
   }
+
   ul {
-    @apply list-disc ml-6 mb-6;
+    @apply list-disc ml-6 mb-6 mb-0;
   }
+}
+
+h1.wp-block-heading {
+  @apply text-4xl font-extrabold mt-5 mb-10;
+}
+
+h2.wp-block-heading {
+  @apply text-3xl font-semibold mb-6;
+}
+
+h3.wp-block-heading {
+  @apply underline;
+}
+
+h4.wp-block-heading {
+  @apply underline;
+}
+
+.simpletoc-list {
+  @apply mb-4;
+}
+
+ul.simpletoc-list li a {
+  @apply no-underline hover:underline;
+}
+
+.wp-block-image {
+  @apply flex justify-center mb-8;
+}
+
+pre.nord {
+  @apply p-4 rounded-md overflow-auto mb-6;
 }
