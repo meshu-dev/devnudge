@@ -6,22 +6,40 @@
   h1 {
     @apply text-4xl font-extrabold mt-5 mb-10;
   }
+
   h2 {
     @apply text-3xl font-semibold mb-6;
   }
+
   p {
     @apply mb-6;
   }
+
   pre {
     @apply mb-6;
   }
+
   article a {
     @apply font-medium underline underline-offset-4;
   }
+
   article p img {
     @apply mx-auto;
   }
+
+  article p:first-child:has(u) {
+    @apply m-0;
+  }
+
   ul {
     @apply list-disc ml-6 mb-6;
+  }
+
+  ol {
+    @apply list-decimal ml-6 mb-6;
+  }
+
+  blockquote {
+    @apply border-l-4 pl-4 border-black;
   }
 }
