@@ -4,7 +4,7 @@ import BlogListItem from "@/components/BlogListItem.astro";
 import type { TagStaticPathParams } from "@/types/static";
 import { getTaggedBlogListPaths } from "@/utils/staticPaths";
 import { getBlogsByTag } from "@/utils/api";
-import type { BlogItem, PaginatedBlogList } from "@/types/blog";
+import type { PaginatedBlogList } from "@/types/blog";
 import BlogList from "@/components/BlogList.astro";
 
 export async function getStaticPaths() {
