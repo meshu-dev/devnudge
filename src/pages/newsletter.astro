@@ -1,0 +1,55 @@
+---
+import Layout from "@/layouts/Layout.astro";
+---
+
+<script is:inline>
+  const onSubmit = async () => {
+    const url = `http://127.0.0.1:8000/sites/2/subscribers`;
+    const email = document.getElementById("email-field")?.value || null;
+
+    if (!email) {
+      alert("Email address is required");
+    }
+
+    try {
+      const response = await fetch(url, {
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        method: "POST",
+        body: JSON.stringify({ email }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`Response status: ${response.status}`);
+      }
+
+      const json = await response.json();
+      console.log(json);
+
+      document.getElementById("email-field").value = "";
+      alert("Thank you for signing up");
+    } catch (error) {
+      console.error(error.message);
+    }
+  };
+</script>
+
+<Layout title="DevNudge software development blog">
+  <h1>Newsletter</h1>
+  <p class="text-xl leading-normal text-gray-900">
+    I'm currenty working on a newsletter to provide content to subscribers.
+  </p>
+  <p class="text-xl leading-normal text-gray-90">
+    If your a beginner developer interested in becoming a better developer then
+    consider subscribing to my newsletter where I will be providing tips,
+    courses and updates on upcoming projects.
+  </p>
+  <form class="flex justify-center mt-10" onsubmit="onSubmit(); return false">
+    <label class="input input-bordered flex items-center gap-2">
+      <input type="text" id="email-field" class="grow" placeholder="Email" />
+    </label>
+    <button type="submit" class="btn btn-neutral ml-2">Submit</button>
+  </form>
+</Layout>
