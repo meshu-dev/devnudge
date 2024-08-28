@@ -4,8 +4,7 @@ import BlogListItem from "@/components/BlogListItem.astro";
 import type { TagStaticPathParams } from "@/types/static";
 import { getTaggedBlogListPaths } from "@/utils/staticPaths";
 import { getBlogsByTag } from "@/utils/api";
-import type { BlogItem, PaginatedBlogList } from "@/types/blog";
-import BlogList from "@/components/BlogList.astro";
+import type { BlogList } from "@/types/blog";
 
 export async function getStaticPaths() {
   const pageTags: TagStaticPathParams[] = await getTaggedBlogListPaths();
@@ -13,10 +12,10 @@ export async function getStaticPaths() {
 }
 
 const { tag } = Astro.params;
-const blogPagination: PaginatedBlogList = await getBlogsByTag(tag);
+let pages = await getBlogsByTag(tag);
 ---
 
 <Layout title="Welcome to Mesh's Blog">
   <h1>Tag: {tag}</h1>
-  <BlogList path={`/tag/${tag}`} blogPagination={blogPagination} />
+  {pages.map((blog: BlogList) => <BlogListItem blog={blog} />)}
 </Layout>

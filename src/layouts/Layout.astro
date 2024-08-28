@@ -9,49 +9,49 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang="en" data-theme="light">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
-    <script
-      defer
-      src="https://api.pirsch.io/pa.js"
-      id="pianjs"
-      data-code="ZdEaXAySIhmUrJFBTnx0i37QjrV81u5w"></script>
-  </head>
-  <body>
-    <div class="m-auto lg:w-[900px] px-6">
-      <Header />
-      <main>
-        <slot />
-      </main>
-    </div>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<script
+			defer
+			src="https://api.pirsch.io/pa.js"
+			id="pianjs"
+			data-code="ZdEaXAySIhmUrJFBTnx0i37QjrV81u5w"></script>
+	</head>
+	<body>
+		<div class="m-auto lg:w-[900px] px-6">
+			<Header />
+			<main>
+				<slot />
+			</main>
+		</div>
+	</body>
 </html>
 <style is:global>
-  :root {
-    --accent: 136, 58, 234;
-    --accent-light: 224, 204, 250;
-    --accent-dark: 49, 10, 101;
-    --accent-gradient: linear-gradient(
-      45deg,
-      rgb(var(--accent)),
-      rgb(var(--accent-light)) 30%,
-      white 60%
-    );
-  }
-  html {
-    font-family: system-ui, sans-serif;
-    /* background: #13151a; */
-    background: #fff;
-    background-size: 224px;
-  }
-  main {
-    color: #000;
-    font-size: 20px;
-    line-height: 1.6;
-  }
+	:root {
+		--accent: 136, 58, 234;
+		--accent-light: 224, 204, 250;
+		--accent-dark: 49, 10, 101;
+		--accent-gradient: linear-gradient(
+			45deg,
+			rgb(var(--accent)),
+			rgb(var(--accent-light)) 30%,
+			white 60%
+		);
+	}
+	html {
+		font-family: system-ui, sans-serif;
+		/* background: #13151a; */
+		background: #fff;
+		background-size: 224px;
+	}
+	main {
+		color: #000;
+		font-size: 20px;
+		line-height: 1.6;
+	}
 </style>

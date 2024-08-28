@@ -1,18 +1,22 @@
 ---
 import BlogTag from "@/components/BlogTag.astro";
 import dayjs from "dayjs";
-import type { BlogItem } from "@/types/blog";
+import type { BlogList } from "@/types/blog";
 
-type Props = { blog: BlogItem };
+type Props = { blog: BlogList };
 const { blog } = Astro.props;
 ---
 
 <div class="my-14">
-  <a class="text-2xl font-bold" href={`/${blog.slug}`}>{blog.title}</a>
-  <div class="mt-2 mb-3">
-    {blog.published_at ? dayjs(blog.published_at).format("MMM D, YYYY") : ""}
-  </div>
-  <div class="mt-2">
-    {blog.tags.map((tag: string) => <BlogTag tag={tag} />)}
-  </div>
+	<a class="text-2xl font-bold" href={`/${blog.slug}`}>{blog.title}</a>
+	<div class="mt-2 mb-3">
+		{
+			blog.published_at
+				? dayjs(blog.published_at).format("MMM D, YYYY")
+				: ""
+		}
+	</div>
+	<div class="mt-2">
+		{blog.tags.map((tag: string) => <BlogTag tag={tag} />)}
+	</div>
 </div>
