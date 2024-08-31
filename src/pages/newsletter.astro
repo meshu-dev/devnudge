@@ -3,8 +3,31 @@ import Layout from "@/layouts/Layout.astro";
 ---
 
 <script is:inline>
+  const addSubscriber = async (token) => {
+    const url = `${import.meta.env.PUBLIC_HYPER_URL}/subscribers`;
+    const email = document.getElementById("email-field")?.value || null;
+
+    const response = await fetch(url, {
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      method: "POST",
+      body: JSON.stringify({ email, token }),
+    });
+
+    if (!response.ok) {
+      throw new Error(`Response status: ${response.status}`);
+    }
+
+    const json = await response.json();
+    console.log(json);
+
+    document.getElementById("email-field").value = "";
+    alert("Thank you for signing up");
+  };
+
   const onSubmit = async () => {
-    const url = `${import.meta.env.PUBLIC_DEVNUDGE_API_URL}/sites/1/subscribers`;
     const email = document.getElementById("email-field")?.value || null;
 
     if (!email) {
@@ -12,24 +35,13 @@ import Layout from "@/layouts/Layout.astro";
     }
 
     try {
-      const response = await fetch(url, {
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        method: "POST",
-        body: JSON.stringify({ email }),
+      grecaptcha.ready(function () {
+        grecaptcha
+          .execute(import.meta.env.PUBLIC_GOOGLE_RECAPTCHA_KEY, {
+            action: "submit",
+          })
+          .then(addSubscriber);
       });
-
-      if (!response.ok) {
-        throw new Error(`Response status: ${response.status}`);
-      }
-
-      const json = await response.json();
-      console.log(json);
-
-      document.getElementById("email-field").value = "";
-      alert("Thank you for signing up");
     } catch (error) {
       console.error(error.message);
     }
@@ -37,13 +49,13 @@ import Layout from "@/layouts/Layout.astro";
 </script>
 
 <Layout title="DevNudge software development blog">
-  <h2 class="mb-10">Newsletter</h2>
+  <h1>Newsletter</h1>
   <p class="text-xl font-bold leading-normal text-gray-900 dark:text-white">
     I'm currenty working on a newsletter to provide content to subscribers.
   </p>
   <p class="text-xl font-bold leading-normal text-gray-900 dark:text-white">
     If your a beginner developer interested in becoming a better developer then
-    consider subscribing to my newsletter where I will be providing tips,
+    please consider subscribing to my newsletter where I will be providing tips,
     courses and updates on upcoming projects.
   </p>
   <form class="flex justify-center mt-10" onsubmit="onSubmit(); return false">
@@ -73,10 +85,6 @@ import Layout from "@/layouts/Layout.astro";
         placeholder="Enter you email address"
       />
     </div>
-    <button
-      type="submit"
-      class="ml-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
-      >Submit</button
-    >
+    <button type="submit" class="button ml-2 me-2 mb-2">Submit</button>
   </form>
 </Layout>

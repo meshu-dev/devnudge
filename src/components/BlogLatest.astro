@@ -9,29 +9,5 @@ const blogs: BlogItem[] = await getLatest();
 <div class="mt-20">
   <h2 class="mb-10">Latest blogs</h2>
   {blogs.map((blogItem: BlogItem) => <BlogLatestItem blog={blogItem} />)}
-  <a
-    href="/blog"
-    class="text-white
-  bg-[#24292F]
-  hover:bg-[#24292F]
-  90
-  focus:ring-4
-  focus:outline-none
-  focus:ring-[#24292F]
-  50
-  font-medium
-  rounded-lg
-  text-sm
-  px-3
-  py-2
-  text-center
-  inline-flex
-  items-center
-  dark:focus:ring-gray-500
-  dark:hover:bg-[#050708]
-  30
-  me-2
-  mb-2"
-    >View More</a
-  >
+  <a href="/blog" class="button">View More</a>
 </div>
