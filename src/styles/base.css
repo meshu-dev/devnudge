@@ -11,6 +11,10 @@
     @apply text-3xl font-semibold mb-6;
   }
 
+  h3 {
+    @apply text-2xl font-semibold mb-3;
+  }
+
   p {
     @apply mb-6;
   }

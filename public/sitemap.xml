@@ -9,168 +9,458 @@
 
 <url>
   <loc>https://devnudge.io/</loc>
-  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://devnudge.io/ubuntu-server-upgrade</loc>
-  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://devnudge.io/tag/linux</loc>
-  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://devnudge.io/tag/ubuntu</loc>
-  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://devnudge.io/laravel-scramble</loc>
-  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
+  <loc>https://devnudge.io/laravel-queues</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://devnudge.io/tag/laravel</loc>
-  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://devnudge.io/laravel-telescope</loc>
-  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://devnudge.io/sqlite-vscode</loc>
-  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://devnudge.io/tag/vscode</loc>
-  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://devnudge.io/tag/sqlite</loc>
-  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://devnudge.io/eza</loc>
-  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
+  <loc>https://devnudge.io/bash-backup-script</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://devnudge.io/tag/cli</loc>
-  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://devnudge.io/laravel-pint</loc>
-  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
+  <loc>https://devnudge.io/tag/bash</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://devnudge.io/code-block-highlighting</loc>
-  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
+  <loc>https://devnudge.io/bash</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/cloudflare-workers</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://devnudge.io/tag/javascript</loc>
-  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://devnudge.io/tag/astro</loc>
-  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://devnudge.io/bat</loc>
-  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://devnudge.io/notion-image-expiry-time</loc>
-  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://devnudge.io/tag/notion</loc>
-  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://devnudge.io/cloudflare-too-many-redirects</loc>
-  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://devnudge.io/tag/services</loc>
-  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://devnudge.io/tag/cloudflare</loc>
-  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://devnudge.io/updating-linux-server</loc>
-  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
+  <loc>https://devnudge.io/laravel-resend-email</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://devnudge.io/custom-alias</loc>
-  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
+  <loc>https://devnudge.io/mysql-backup</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://devnudge.io/git-unrelated-histories</loc>
-  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
+  <loc>https://devnudge.io/tag/mysql</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://devnudge.io/tag/git</loc>
-  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
+  <loc>https://devnudge.io/tag/linux</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://devnudge.io/git-add-remote</loc>
-  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
+  <loc>https://devnudge.io/python-start</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
   <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/tag/python</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/laravel-storage-s3</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/tag/aws</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/minio</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/tag/macos</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/aws-sam-cli</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/blog/2</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/blog/3</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/blog/4</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/blog/5</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/blog/6</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/laravel-tailwind-css</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/tag/tailwind</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/tag/css</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/laravel-pdf</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/tinkerwell</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/laravel-pest-coverage</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/laravel-pest</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/laravel-scramble</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/laravel-telescope</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/tag/laravel/2</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/s3cmd</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/python-app</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/flatpak</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/tag/ubuntu</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/dockly</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/thefuck</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/php-codesniffer</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/tag/php</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/fastfetch</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/tag/cli/2</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/tag/cli/3</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/code-block-highlighting</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/tag/astro</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://devnudge.io/astro</loc>
-  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://devnudge.io/ip</loc>
-  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://devnudge.io/notion-api</loc>
-  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
-  <priority>0.80</priority>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://devnudge.io/bun</loc>
-  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
-  <priority>0.80</priority>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/cloudflare-too-many-redirects</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/tag/services</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/heidisql-linux</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/tag/database</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/tinkerwell-install</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/tag/linux/2</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/tag/linux/3</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/eza</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/bat</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/vscode-livepreview</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/tag/vscode</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/vscode-php-codesniffer</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/composer-global-fix</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/tag/composer</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/vscode-extension-export</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/bee-keeper-ubuntu</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/btop</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/zoxide</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/xdebug</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/tag/xdebug</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/github-ssh-key</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/tag/git</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/ssh-key</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/app-image</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/burn-iso-image-to-usb</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/tag/tools</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/ubuntu-server-upgrade</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/sqlite-vscode</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/tag/sqlite</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/laravel-pint</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/notion-image-expiry-time</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/tag/notion</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/updating-linux-server</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/custom-alias</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/git-unrelated-histories</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/git-add-remote</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/ip</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://devnudge.io/notion-api</loc>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://devnudge.io/notion-blog</loc>
-  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
-  <priority>0.80</priority>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://devnudge.io/laravel-11</loc>
-  <lastmod>2024-04-26T23:43:10+00:00</lastmod>
-  <priority>0.80</priority>
+  <lastmod>2024-08-31T01:16:04+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 
 
