@@ -8,6 +8,8 @@ for (let index = 0; index < totalPages; index++) {
   const page: number = index + 1;
   let pageBtn: string = "";
 
+  const btnClasses: string = `${page == 1 ? "rounded-s-lg" : ""} ${page == totalPages ? "rounded-e-lg" : ""} flex items-center justify-center px-4 h-10 leading-tight border`;
+
   if (page == currentPage) {
     pageBtn = `
       <span
@@ -25,7 +27,7 @@ for (let index = 0; index < totalPages; index++) {
         >${page}</a
       >`;
   }
-  buttons.push(pageBtn);
+  buttons.push(`<li>${pageBtn}</li>`);
 }
 ---
 

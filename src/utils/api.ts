@@ -1,4 +1,4 @@
-import type { Blog, PaginatedBlogList, Tag } from "@/types/blog"
+import type { Blog, BlogItem, PaginatedBlogList, Tag } from "@/types/blog"
 
 const hyperUrl: string = import.meta.env.PROD ? import.meta.env.HYPER_URL : import.meta.env.PUBLIC_HYPER_URL
 

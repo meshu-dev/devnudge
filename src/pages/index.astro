@@ -3,6 +3,8 @@ import Layout from "@/layouts/Layout.astro";
 import BlogList from "@/components/BlogList.astro";
 import { getBlogs } from "@/utils/api";
 import type { PaginatedBlogList } from "@/types/blog";
+import BlogLatest from "@/components/BlogLatest.astro";
+import XHomeButton from "@/components/XHomeButton.astro";
 
 const blogPagination: PaginatedBlogList = await getBlogs();
 ---
