@@ -9,16 +9,21 @@ for (let index = 0; index < totalPages; index++) {
   let pageBtn: string = "";
 
   if (page == currentPage) {
-    pageBtn = `<span class="join-item btn btn-active">${page}</span>`;
+    pageBtn = `
+      <span
+        aria-current="page"
+        class="${btnClasses} z-10 text-white border-blue-300 bg-blue-700"
+        >
+      ${page}
+      </span>
+    `;
   } else {
-    let link: string;
-
-    if (page > 1) {
-      link = `${path}/${page}`;
-    } else {
-      link = path != "/blog" ? path : "/";
-    }
-    pageBtn = `<a href="${link}" class="join-item btn">${page}</a>`;
+    pageBtn = `
+      <a
+        href="${page > 1 ? `${path}/${page}` : `${path}`}"
+        class="${btnClasses} text-gray-500 bg-white border-gray-300 hover:bg-blue-100 hover:text-blue-700"
+        >${page}</a
+      >`;
   }
   buttons.push(pageBtn);
 }
@@ -26,8 +31,10 @@ for (let index = 0; index < totalPages; index++) {
 
 {
   totalPages > 1 ? (
-    <div class="join mb-8">
-      <Fragment set:html={buttons} />
-    </div>
+    <nav aria-label="Page navigation example">
+      <ul class="flex items-center -space-x-px h-10 text-base list-none m-0 rounded-lg mb-10">
+        <Fragment set:html={buttons} />
+      </ul>
+    </nav>
   ) : null
 }

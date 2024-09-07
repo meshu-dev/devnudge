@@ -1,7 +1,15 @@
-<header class="py-6">
-  <div class="navbar bg-base-100">
-    <div class="flex-1">
-      <a href="/" class="text-xl">DevPush</a>
+---
+import XLink from "@/components/XLink.astro";
+import HeaderLinks from "@/layouts/HeaderLinks.astro";
+---
+
+<header>
+  <nav class="border-gray-200 dark:bg-gray-900">
+    <div
+      class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+    >
+      <HeaderLinks />
+      <XLink />
     </div>
     <div class="flex-none">
       <ul class="menu menu-horizontal px-1">
@@ -10,5 +18,5 @@
         <li><a href="/contact">Contact</a></li>
       </ul>
     </div>
-  </div>
+  </nav>
 </header>

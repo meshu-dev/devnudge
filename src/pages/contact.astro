@@ -8,10 +8,6 @@ const blogPagination: PaginatedBlogList = await getBlogs();
 ---
 
 <Layout title="DevNudge software development blog">
-  <h1>Contact</h1>
-  <p>
-    You can contact me by e-mail with any questions, comments, feedback or even
-    help with any of the guides on the website.
-  </p>
-  <p>contact@devpush.io</p>
+  <h1>Blog</h1>
+  <BlogList path="/blog" blogPagination={blogPagination} />
 </Layout>

@@ -1,0 +1,13 @@
+---
+import BlogLatestItem from "@/components/BlogLatestItem.astro";
+import { getLatest } from "@/utils/api";
+import type { BlogItem } from "@/types/blog";
+
+const blogs: BlogItem[] = await getLatest();
+---
+
+<div class="mt-20">
+  <h2 class="mb-10">Latest blogs</h2>
+  {blogs.map((blogItem: BlogItem) => <BlogLatestItem blog={blogItem} />)}
+  <a href="/blog" class="button">View More</a>
+</div>

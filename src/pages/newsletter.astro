@@ -3,8 +3,31 @@ import Layout from "@/layouts/Layout.astro";
 ---
 
 <script is:inline>
+  const addSubscriber = async (token) => {
+    const url = `${import.meta.env.PUBLIC_HYPER_URL}/subscribers`;
+    const email = document.getElementById("email-field")?.value || null;
+
+    const response = await fetch(url, {
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      method: "POST",
+      body: JSON.stringify({ email, token }),
+    });
+
+    if (!response.ok) {
+      throw new Error(`Response status: ${response.status}`);
+    }
+
+    const json = await response.json();
+    console.log(json);
+
+    document.getElementById("email-field").value = "";
+    alert("Thank you for signing up");
+  };
+
   const onSubmit = async () => {
-    const url = `http://127.0.0.1:8000/sites/2/subscribers`;
     const email = document.getElementById("email-field")?.value || null;
 
     if (!email) {
@@ -12,24 +35,13 @@ import Layout from "@/layouts/Layout.astro";
     }
 
     try {
-      const response = await fetch(url, {
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        method: "POST",
-        body: JSON.stringify({ email }),
+      grecaptcha.ready(function () {
+        grecaptcha
+          .execute(import.meta.env.PUBLIC_GOOGLE_RECAPTCHA_KEY, {
+            action: "submit",
+          })
+          .then(addSubscriber);
       });
-
-      if (!response.ok) {
-        throw new Error(`Response status: ${response.status}`);
-      }
-
-      const json = await response.json();
-      console.log(json);
-
-      document.getElementById("email-field").value = "";
-      alert("Thank you for signing up");
     } catch (error) {
       console.error(error.message);
     }
@@ -38,18 +50,41 @@ import Layout from "@/layouts/Layout.astro";
 
 <Layout title="DevNudge software development blog">
   <h1>Newsletter</h1>
-  <p class="text-xl leading-normal text-gray-900">
+  <p class="text-xl font-bold leading-normal text-gray-900 dark:text-white">
     I'm currenty working on a newsletter to provide content to subscribers.
   </p>
-  <p class="text-xl leading-normal text-gray-90">
+  <p class="text-xl font-bold leading-normal text-gray-900 dark:text-white">
     If your a beginner developer interested in becoming a better developer then
-    consider subscribing to my newsletter where I will be providing tips,
+    please consider subscribing to my newsletter where I will be providing tips,
     courses and updates on upcoming projects.
   </p>
   <form class="flex justify-center mt-10" onsubmit="onSubmit(); return false">
-    <label class="input input-bordered flex items-center gap-2">
-      <input type="text" id="email-field" class="grow" placeholder="Email" />
-    </label>
-    <button type="submit" class="btn btn-neutral ml-2">Submit</button>
+    <div class="relative h-10">
+      <div
+        class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none"
+      >
+        <svg
+          class="w-4 h-4 pt-1 text-gray-500 dark:text-gray-400"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 0 20 16"
+        >
+          <path
+            d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z"
+          ></path>
+          <path
+            d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z"
+          ></path>
+        </svg>
+      </div>
+      <input
+        type="email"
+        id="email-field"
+        class="w-80 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        placeholder="Enter you email address"
+      />
+    </div>
+    <button type="submit" class="button ml-2 me-2 mb-2">Submit</button>
   </form>
 </Layout>
