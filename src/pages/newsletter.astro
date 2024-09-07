@@ -2,6 +2,7 @@
 import Layout from "@/layouts/Layout.astro";
 
 const hyperUrl: string = import.meta.env.PUBLIC_HYPER_URL;
+const googleRecaptchaKey: string = import.meta.env.PUBLIC_GOOGLE_RECAPTCHA_KEY;
 ---
 
 <script is:inline>
@@ -39,7 +40,7 @@ const hyperUrl: string = import.meta.env.PUBLIC_HYPER_URL;
     try {
       grecaptcha.ready(function () {
         grecaptcha
-          .execute(import.meta.env.PUBLIC_GOOGLE_RECAPTCHA_KEY, {
+          .execute(googleRecaptchaKey, {
             action: "submit",
           })
           .then(addSubscriber);
