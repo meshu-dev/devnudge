@@ -1,10 +1,12 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+
+const hyperUrl: string = import.meta.env.PUBLIC_HYPER_URL;
 ---
 
 <script is:inline>
   const addSubscriber = async (token) => {
-    const url = `${import.meta.env.PUBLIC_HYPER_URL}/subscribers`;
+    const url = `${hyperUrl}/subscribers`;
     const email = document.getElementById("email-field")?.value || null;
 
     const response = await fetch(url, {
