@@ -6,6 +6,9 @@ const googleRecaptchaKey: string = import.meta.env.PUBLIC_GOOGLE_RECAPTCHA_KEY;
 ---
 
 <script is:inline>
+  const hyperUrl = { hyperUrl };
+  const googleRecaptchaKey = { googleRecaptchaKey };
+
   const addSubscriber = async (token) => {
     const url = `${hyperUrl}/subscribers`;
     const email = document.getElementById("email-field")?.value || null;
