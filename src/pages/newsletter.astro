@@ -6,11 +6,8 @@ const googleRecaptchaKey: string = import.meta.env.PUBLIC_GOOGLE_RECAPTCHA_KEY;
 ---
 
 <script is:inline>
-  const hyperUrl = { hyperUrl };
-  const googleRecaptchaKey = { googleRecaptchaKey };
-
   const addSubscriber = async (token) => {
-    const url = `${hyperUrl}/subscribers`;
+    const url = `${document.getElementById("newsletter").getAttribute("data-hyper-url")}/subscribers`;
     const email = document.getElementById("email-field")?.value || null;
 
     const response = await fetch(url, {
@@ -43,9 +40,14 @@ const googleRecaptchaKey: string = import.meta.env.PUBLIC_GOOGLE_RECAPTCHA_KEY;
     try {
       grecaptcha.ready(function () {
         grecaptcha
-          .execute(googleRecaptchaKey, {
-            action: "submit",
-          })
+          .execute(
+            document
+              .getElementById("newsletter")
+              .getAttribute("data-google-recaptcha-key"),
+            {
+              action: "submit",
+            },
+          )
           .then(addSubscriber);
       });
     } catch (error) {
@@ -64,7 +66,13 @@ const googleRecaptchaKey: string = import.meta.env.PUBLIC_GOOGLE_RECAPTCHA_KEY;
     please consider subscribing to my newsletter where I will be providing tips,
     courses and updates on upcoming projects.
   </p>
-  <form class="flex justify-center mt-10" onsubmit="onSubmit(); return false">
+  <form
+    id="newsletter"
+    class="flex justify-center mt-10"
+    onsubmit="onSubmit(); return false"
+    data-hyper-url={hyperUrl}
+    data-google-recaptcha-key={googleRecaptchaKey}
+  >
     <div class="relative h-10">
       <div
         class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none"
