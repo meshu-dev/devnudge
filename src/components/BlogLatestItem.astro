@@ -7,8 +7,10 @@ const { blog } = Astro.props;
 ---
 
 <div class="flex justify-between mb-6">
-  <a class="link" href={`/${blog.slug}`}>{blog.title}</a>
-  <div class="hover:decoration-blue-700">
+  <a class="link flex-1 pr-8 leading-[2.7rem]" href={`/${blog.slug}`}
+    >{blog.title}</a
+  >
+  <div class="hover:decoration-blue-700 flex-initial w-32">
     {blog.published_at ? dayjs(blog.published_at).format("MMM D, YYYY") : ""}
   </div>
 </div>

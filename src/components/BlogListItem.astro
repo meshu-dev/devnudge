@@ -7,14 +7,14 @@ type Props = { blog: BlogItem };
 const { blog } = Astro.props;
 ---
 
-<div class="flex flex-row justify-between mb-14">
-  <div class="max-w-xl">
+<div class="flex justify-between mb-14">
+  <div class="flex-1 pr-8 leading-[2.7rem]">
     <a class="link" href={`/${blog.slug}`}>{blog.title}</a>
-    <div class="mt-4">
+    <div class="mt-2">
       {blog.tags.map((tag: string) => <BlogTag tag={tag} />)}
     </div>
   </div>
-  <div class="mb-6">
+  <div class="flex-initial w-32">
     {blog.published_at ? dayjs(blog.published_at).format("MMM D, YYYY") : ""}
   </div>
 </div>
