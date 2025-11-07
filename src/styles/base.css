@@ -66,4 +66,8 @@
   article ul li a {
     @apply no-underline hover:underline;
   }
+
+  article img {
+    @apply mb-6;
+  }
 }

@@ -1,10 +1,8 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import BlogList from "@/components/BlogList.astro";
 import { getBlogs } from "@/utils/api";
 import type { PaginatedBlogList } from "@/types/blog";
 import BlogLatest from "@/components/BlogLatest.astro";
-import XHomeButton from "@/components/XHomeButton.astro";
 
 const blogPagination: PaginatedBlogList = await getBlogs();
 ---
@@ -16,6 +14,5 @@ const blogPagination: PaginatedBlogList = await getBlogs();
     existing web technologies that I use in my personal projects and
     professional work.
   </p>
-  <XHomeButton />
   <BlogLatest />
 </Layout>
