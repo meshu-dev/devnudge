@@ -3,7 +3,7 @@ export type Blog = {
 }
 
 export type BlogItem = {
-  title: string,
+  title: string
   slug: string
   status: string
   tags: string[]
@@ -12,18 +12,18 @@ export type BlogItem = {
 }
 
 export type PaginatedBlogList = {
-  data: BlogItem[];
+  data: BlogItem[]
   meta: {
-    current_page: number,
-    last_page: number,
+    current_page: number
+    last_page: number
     total: number
   }
 }
 
 export type TagList = {
   data: {
-    name: string,
-    total_blogs: number,
+    name: string
+    total_blogs: number
     total_pages: number
   }[]
 }
