@@ -20,7 +20,7 @@ export type PaginatedBlogList = {
   }
 }
 
-export type PaginatedTagList = {
+export type TagList = {
   data: Tag[]
 }
 
