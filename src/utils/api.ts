@@ -1,6 +1,6 @@
 import type { Blog, BlogItem, PaginatedBlogList, Tag } from "@/types/blog"
 
-const hyperUrl: string = import.meta.env.PROD ? import.meta.env.HYPER_URL : import.meta.env.PUBLIC_HYPER_URL
+const hyperUrl: string = import.meta.env.PUBLIC_HYPER_URL
 const blogUrl: string = `${hyperUrl}/sites/devnudge`
 
 const getToken = async (): Promise<string> => {
