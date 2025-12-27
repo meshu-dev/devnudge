@@ -1,4 +1,4 @@
-import type { Blog, PaginatedBlogList, TagList, SlugList, Tag } from "@/types/blog"
+import type { Blog, PaginatedBlogList, TagList, SlugList } from "@/types/blog"
 
 const hyperUrl: string = import.meta.env.PUBLIC_HYPER_URL
 const blogUrl: string = `${hyperUrl}/sites/devnudge`
