@@ -18,8 +18,16 @@ export type PaginatedBlogList = {
   }
 }
 
+export type PaginatedTagList = {
+  data: Tag[]
+}
+
 export type Tag = {
   name: string,
   total_blogs: number,
   total_pages: number
+}
+
+export type SlugList = {
+  data: string[]
 }

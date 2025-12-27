@@ -1,4 +1,4 @@
-import type { Blog, BlogItem, PaginatedBlogList, Tag } from "@/types/blog"
+import type { Blog, PaginatedBlogList, PaginatedTagList, SlugList, Tag } from "@/types/blog"
 
 const hyperUrl: string = import.meta.env.PUBLIC_HYPER_URL
 const blogUrl: string = `${hyperUrl}/sites/devnudge`
@@ -18,8 +18,8 @@ const getToken = async (): Promise<string> => {
       })
     }
   )
-  const data: { [token: string]: string } = await response.json()
-  return data.token
+  const result: { data: { token: string }} = await response.json()
+  return result.data.token
 }
 
 const authToken: string = await getToken()
@@ -38,18 +38,18 @@ const callApi = async (url: string): Promise<Response> => {
   )
 }
 
-export const getSlugs = async (): Promise<string[]> => {
+export const getSlugs = async (): Promise<SlugList> => {
   const response: Response = await callApi(`${blogUrl}/blogs/slugs`)
-  const slugs: string[] = await response.json()
+  const slugList: SlugList = await response.json()
 
-  return slugs
+  return slugList
 }
 
-export const getTags = async (): Promise<Tag[]> => {
+export const getTags = async (): Promise<PaginatedTagList> => {
   const response: Response = await callApi(`${blogUrl}/tags`)
-  const tags: Tag[] = await response.json()
+  const tagList: PaginatedTagList = await response.json()
 
-  return tags
+  return tagList
 }
 
 export const getTotalPages = async (): Promise<number> => {
@@ -61,9 +61,9 @@ export const getTotalPages = async (): Promise<number> => {
 
 export const getBlogs = async (page: number = 1): Promise<PaginatedBlogList> => {
   const response: Response = await callApi(`${blogUrl}/blogs?page=${page}`)
-  const paginatedBlogList: PaginatedBlogList = await response.json()
+  const blogList: PaginatedBlogList = await response.json()
 
-  return paginatedBlogList
+  return blogList
 }
 
 export const getBlogsByTag = async (tag: string, page: number = 1): Promise<PaginatedBlogList> => {
@@ -80,9 +80,9 @@ export const getBlog = async (slug: string): Promise<Blog> => {
   return blog
 }
 
-export const getLatest = async (): Promise<BlogItem[]> => {
-  const response: Response = await callApi(`${blogUrl}/blogs/latest`)
-  const blogs: BlogItem[] = await response.json()
+export const getLatest = async (): Promise<PaginatedBlogList> => {
+  const response: Response = await callApi(`${blogUrl}/blogs?page=1&per_page=5`)
+  const blogList: PaginatedBlogList = await response.json()
 
-  return blogs
+  return blogList
 }

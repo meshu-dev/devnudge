@@ -1,10 +1,10 @@
 import type { BlogListStaticPathParams, BlogStaticPathParams, TagStaticPathParams } from "@/types/static"
 import { getSlugs, getTags, getTotalPages } from "./api"
-import type { Tag } from "@/types/blog"
+import type { PaginatedTagList, SlugList, Tag } from "@/types/blog"
 
 export const getBlogViewPaths = async (): Promise<BlogStaticPathParams[]> => {
-  const slugs: Array<string> = await getSlugs()
-  const slugParams: BlogStaticPathParams[] = slugs.map(slug => ({ params: { slug } }))
+  const slugList: SlugList = await getSlugs()
+  const slugParams: BlogStaticPathParams[] = slugList.data.map(slug => ({ params: { slug } }))
 
   return slugParams
 }
@@ -21,10 +21,10 @@ export const getBlogListPaths = async (): Promise<BlogListStaticPathParams[]> =>
 }
 
 export const getTaggedBlogListPaths = async (): Promise<TagStaticPathParams[]> => {
-  const tags: Tag[] = await getTags()
+  const tagList: PaginatedTagList = await getTags()
   const tagParams: TagStaticPathParams[] = []
 
-  for (const tag of tags) {
+  for (const tag of tagList.data) {
     for (let i = 0; i < tag.total_pages; i++) {
       tagParams.push({ params: { tag: tag.name, page: (i + 1) } })
     }
