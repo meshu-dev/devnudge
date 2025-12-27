@@ -1,4 +1,6 @@
-export type Blog = BlogItem & { content: string }
+export type Blog = {
+  data: BlogItem & { content: string }
+}
 
 export type BlogItem = {
   title: string,
