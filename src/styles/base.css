@@ -71,3 +71,11 @@
     @apply mb-6;
   }
 }
+
+pre {
+    font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 0.875rem; /* 14px */
+    padding: 1rem 1.5rem; /* 16px 24px */
+    border-radius: 0.375rem; /* 6px */
+    overflow-x: auto;
+}

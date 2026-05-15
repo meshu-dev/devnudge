@@ -1,9 +1,9 @@
 ---
-import Layout from "@/layouts/Layout.astro";
-import { getBlog } from "@/utils/api";
-import { getBlogViewPaths } from "@/utils/staticPaths";
-import type { BlogStaticPathParams } from "@/types/static";
-import type { Blog } from "@/types/blog";
+import Layout from "@/layouts/Layout.astro"
+import { getBlog } from "@/utils/api"
+import { getBlogViewPaths } from "@/utils/staticPaths"
+import type { BlogStaticPathParams } from "@/types/static"
+import type { Blog } from "@/types/blog"
 
 export async function getStaticPaths() {
   const pageSlugs: BlogStaticPathParams[] = await getBlogViewPaths();
@@ -16,5 +16,22 @@ const blog: Blog | null = await getBlog(slug);
 
 <Layout title={`${blog?.data.title} | DevNudge`}>
   <h1>{blog?.data.title}</h1>
-  <article set:html={blog?.data.content} />
+  <article set:html={ blog?.data.content } />
 </Layout>
+
+<script>
+  const copyButtons = document.querySelectorAll('.copy-button')
+
+  const copyCode = (event: PointerEvent) => {
+    const element: HTMLElement = event?.target as HTMLElement
+    const code: string = element?.parentNode?.parentNode?.parentNode?.querySelector('code')?.textContent || ''
+
+    console.log('Button was clicked!', code)
+
+    navigator.clipboard.writeText(code)
+  }
+
+  copyButtons.forEach((copyButton) => {
+    copyButton.addEventListener('click', copyCode)
+  })
+</script>

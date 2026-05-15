@@ -12,6 +12,7 @@
   "dependencies": {
     "@astrojs/check": "^0.5.10",
     "@astrojs/tailwind": "^5.1.0",
+    "@lucide/astro": "^1.16.0",
     "astro": "^4.6.0",
     "dayjs": "^1.11.10",
     "flowbite": "^2.5.1",
