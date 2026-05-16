@@ -1,0 +1,21 @@
+---
+import type { BlogItem, PaginatedBlogList } from "@/types/blog";
+import BlogListItem from "@/components/BlogListItem.astro";
+import Pagination from "@/components/Pagination.astro";
+
+type Props = { path: string; blogPagination: PaginatedBlogList };
+const { path, blogPagination } = Astro.props;
+---
+
+<div>
+  {
+    blogPagination.data.map((blogItem: BlogItem) => (
+      <BlogListItem blog={blogItem} />
+    ))
+  }
+  <Pagination
+    path={path}
+    currentPage={blogPagination.meta.current_page}
+    totalPages={blogPagination.meta.last_page}
+  />
+</div>
