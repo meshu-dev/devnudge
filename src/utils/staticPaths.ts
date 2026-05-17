@@ -14,7 +14,7 @@ export const getBlogListPaths = async (): Promise<BlogListStaticPathParams[]> =>
   const blogListParams: BlogListStaticPathParams[] = []
 
   for (let index: number = 0; index < totalPages; index++) {
-    blogListParams.push({ params: { page: (index + 1) } })
+    blogListParams.push({ params: { page: String(index + 1) } })
   }
 
   return blogListParams
@@ -26,7 +26,7 @@ export const getTaggedBlogListPaths = async (): Promise<TagStaticPathParams[]> =
 
   for (const tag of tagList.data) {
     for (let i = 0; i < tag.total_pages; i++) {
-      tagParams.push({ params: { tag: tag.name, page: (i + 1) } })
+      tagParams.push({ params: { tag: tag.name, page: String(i + 1) } })
     }
   }
 

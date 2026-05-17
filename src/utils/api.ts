@@ -1,4 +1,4 @@
-import type { Blog, PaginatedBlogList, TagList, SlugList } from "@/types/blog"
+import type { Blog, PaginatedBlogList, TagList, SlugList, TotalPages } from "@/types/blog"
 
 const hyperUrl: string = import.meta.env.PUBLIC_HYPER_URL
 const blogUrl: string = `${hyperUrl}/sites/devnudge`
@@ -54,9 +54,9 @@ export const getTags = async (): Promise<TagList> => {
 
 export const getTotalPages = async (): Promise<number> => {
   const response: Response = await callApi(`${blogUrl}/blogs/total-pages`)
-  const data: { [total_pages: string]: number } = await response.json()
+  const totalPages: TotalPages = await response.json()
 
-  return data.total_pages
+  return totalPages.data.pages
 }
 
 export const getBlogs = async (page: number = 1): Promise<PaginatedBlogList> => {

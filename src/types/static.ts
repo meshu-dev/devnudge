@@ -6,13 +6,13 @@ export type BlogStaticPathParams = {
 
 export type BlogListStaticPathParams = {
   params: {
-    page: number
+    page: string
   }
 }
 
 export type TagStaticPathParams = {
   params: {
     tag: string
-    page: number
+    page: string
   }
 }

@@ -7,12 +7,12 @@ import { getBlogListPaths } from "@/utils/staticPaths";
 import type { PaginatedBlogList } from "@/types/blog";
 
 export async function getStaticPaths() {
-  const blogListPages: BlogListStaticPathParams[] = await getBlogListPaths();
+  const blogListPages: BlogListStaticPathParams[] = await getBlogListPaths()
   return blogListPages;
 }
 
-const { page } = Astro.params;
-const blogPagination: PaginatedBlogList = await getBlogs(Number(page));
+const { page } = Astro.params
+const blogPagination: PaginatedBlogList = await getBlogs(Number(page))
 ---
 
 <Layout title="DevNudge software development blog">

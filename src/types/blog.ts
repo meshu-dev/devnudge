@@ -31,3 +31,9 @@ export type TagList = {
 export type SlugList = {
   data: string[]
 }
+
+export type TotalPages = {
+  data: {
+    pages: number
+  }
+}
